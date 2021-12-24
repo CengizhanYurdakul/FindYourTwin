@@ -27,7 +27,7 @@ class FaceRecognizer:
         inputImage = np.transpose(inputImage, (2, 0, 1))
         inputImage = torch.from_numpy(inputImage).unsqueeze(0).float()
         inputImage.div_(255).sub_(0.5).div_(0.5)
-        return inputImage.to(self.args["device"])
+        return inputImage
 
     def extractIdentity(self, inputImage:np.array)->torch.Tensor:
         """
@@ -40,5 +40,5 @@ class FaceRecognizer:
             torch.Tensor: Identity
         """
         inputImage = self.preprocess(inputImage)
-        inputIdentity = self.faceRecognitionModel(inputImage)
+        inputIdentity = self.faceRecognitionModel(inputImage.to(self.args["device"]))
         return inputIdentity
