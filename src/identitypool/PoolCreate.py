@@ -10,7 +10,7 @@ class PoolCreator:
     def __init__(self, **args):
         self.args = args
         
-        self.faceDetector = FaceDetector()        
+        self.faceDetector = FaceDetector(**self.args)        
         self.faceRecognizer = FaceRecognizer(**self.args)
         
         self.imagePaths = os.listdir(self.args["imagePaths"])
