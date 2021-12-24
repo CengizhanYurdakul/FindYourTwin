@@ -1,6 +1,6 @@
 import numpy as np
 
-def create_arcface_template()->np.array:
+def alignmentTemplate()->np.array:
     """
     The alignment template of the face to be given as input to the face recognition model.
 
