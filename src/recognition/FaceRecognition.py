@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 
-from src.recognition.backbone import IResNet
+from src.recognition.Backbone import IResNet
 
 class FaceRecognizer:
     def __init__(self, **args):
