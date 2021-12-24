@@ -4,8 +4,10 @@ from skimage import transform as trans
 
 from src.utils.utils import *
 class FaceDetector:
-    def __init__(self):
-        self.faceDetectionModel = MTCNN()
+    def __init__(self, **args):
+        self.args = args
+        
+        self.faceDetectionModel = MTCNN(device=self.args["device"])
         print("Face detector model initialized!")
         
         self.alignmentTemplate = alignmentTemplate()
