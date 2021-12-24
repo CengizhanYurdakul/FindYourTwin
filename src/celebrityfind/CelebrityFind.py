@@ -28,9 +28,7 @@ class CelebrityFinder:
         
         inputImage[:int(inputImage.shape[1]/4), int(3*inputImage.shape[1]/4):] = cv2.resize(celebrityImage, (int(inputImage.shape[1]/4), int(inputImage.shape[1]/4)))
         
-        
-        
-        cv2.imwrite("Celebrity.jpg", inputImage)
+        cv2.imwrite(self.args["resultImageName"], inputImage)
         print("Your similarity with your celebrity: %s" % round(self.maxSimilarity, 3))
  
     def find(self):
