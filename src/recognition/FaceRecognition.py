@@ -13,5 +13,8 @@ class FaceRecognizer:
 
         print("Face recognition model weights initialized!")
 
+    def extractIdentity(self, inputImage):
+        pass
+
     def main(self):
         pass

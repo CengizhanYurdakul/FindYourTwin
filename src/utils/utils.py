@@ -1,0 +1,1 @@
+#TODO add method that prepare identity pool
