@@ -20,7 +20,7 @@ class PoolCreator:
         self.undetectedImages = 0
         
     def updateIdentityDictionary(self, imageName, outputIdentity):
-        self.identityDictionary[imageName] = outputIdentity
+        self.identityDictionary[imageName] = outputIdentity.cpu().numpy()
         
     def savePickle(self):
         with open(self.args["poolResultName"], "wb") as f:
