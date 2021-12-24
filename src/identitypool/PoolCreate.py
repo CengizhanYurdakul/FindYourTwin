@@ -17,6 +17,8 @@ class PoolCreator:
         
         self.identityDictionary = {}
         
+        self.undetectedImages = 0
+        
     def updateIdentityDictionary(self, imageName, outputIdentity):
         self.identityDictionary[imageName] = outputIdentity
         
@@ -31,11 +33,16 @@ class PoolCreator:
             
             alignedImage = self.faceDetector.alignFace(inputImage)
             
+            if alignedImage is None:
+                self.undetectedImages += 1
+                continue
+            
             outputIdentity = self.faceRecognizer.extractIdentity(alignedImage)
             
             self.updateIdentityDictionary(imageName, outputIdentity)
             
         
         self.savePickle()
+        print("%s image could not be detected!" % self.undetectedImages)
         
     

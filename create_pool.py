@@ -11,7 +11,6 @@ if __name__ == "__main__":
     args.add_argument("--imagePaths", default="CelebaHQImages", help="Images path that includes all images", type=str)
 
     arguments = vars(args.parse_args())
-
     
     manager = PoolCreator(**arguments)
     manager.create()

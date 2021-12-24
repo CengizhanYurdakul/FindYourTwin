@@ -25,6 +25,9 @@ class FaceDetector:
         """
         faceInformations = self.detectFace(inputImage)
         
+        if faceInformations[0] is None:
+            return None
+        
         boundingBox, landmark5 = parseDetectionResult(faceInformations)
         
         self.similarityTransform.estimate(landmark5, self.alignmentTemplate)
