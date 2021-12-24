@@ -50,6 +50,7 @@ class IBasicBlock(nn.Module):
         if self.downsample is not None:
             identity = self.downsample(x)
         out += identity
+        return out
 
 class IResNet(nn.Module):
     fc_scale = 7 * 7
