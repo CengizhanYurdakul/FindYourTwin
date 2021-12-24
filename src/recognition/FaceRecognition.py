@@ -40,5 +40,8 @@ class FaceRecognizer:
             torch.Tensor: Identity
         """
         inputImage = self.preprocess(inputImage)
-        inputIdentity = self.faceRecognitionModel(inputImage.to(self.args["device"]))
+        
+        with torch.no_grad():
+            inputIdentity = self.faceRecognitionModel(inputImage.to(self.args["device"]))
+            
         return inputIdentity
