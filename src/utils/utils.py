@@ -12,3 +12,15 @@ def alignmentTemplate()->np.array:
                      [56.0252, 71.7366],
                      [41.5493, 92.3655],
                      [70.7299, 92.2041]], dtype=np.float32)
+
+def parseDetectionResult(allInformations:np.array)->np.array:
+    """
+    The method that splits the detection outputs and takes the ones to be used.
+
+    Args:
+        allInformations (np.array): An array with bounding box, confidence and 5 landmarks, respectively.
+
+    Returns:
+        np.array: Bounding box and 5 landmark information.
+    """
+    return allInformations[0], allInformations[2]
