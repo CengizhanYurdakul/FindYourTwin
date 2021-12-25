@@ -15,3 +15,6 @@ pip install -r requirements.txt
 
 ## 1. Create Celebrity Identity Pool
 The identity pool to be created will process all images of a dataset one by one and save them to a pickle. If we need to go in accordance with the story, it can be said to process the images of the people in all the casting agencies one by one. This pool can be created with any dataset found on the Internet ([FFHQ](https://github.com/NVlabs/ffhq-dataset), [CelebA-HQ](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), [etc.](https://analyticsindiamag.com/10-face-datasets-to-start-facial-recognition-projects/)). As I said before, I will use the [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset.
+
+If you want to pass this process, the pool prepared with the CelebA dataset is available at this [link](https://drive.google.com/file/d/12z5Kdk4m7ONJHC2DJcMrgF8LuPdf1BGR/view?usp=sharing).
+
