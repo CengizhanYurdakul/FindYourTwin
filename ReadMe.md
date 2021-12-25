@@ -40,3 +40,5 @@ python create_pool.py --yourImage cengizhan.jpg --resultImageName Twin.jpg
 ```
 ### The magic happened and you found the closest face to your own in the identity pool you created.
 ![InputImage](src/docs/cengizhanCropped.jpg) ![TwinImage](src/docs/Twin.jpg)
+
+### I think the face that comes out most similar to me in dataset is not very similar, but you should try it too. Because this handsomeness can also be unique.
