@@ -39,4 +39,4 @@ Example:
 python create_pool.py --yourImage cengizhan.jpg --resultImageName Twin.jpg
 ```
 ### The magic happened and you found the closest face to your own in the identity pool you created.
-![InputImage](src/docs/cengizhanCropped.jpg) | ![TwinImage](src/docs/Twin.jpg)
+![InputImage](src/docs/cengizhanCropped.jpg) ![TwinImage](src/docs/Twin.jpg)
