@@ -29,3 +29,12 @@ Example:
 python create_pool.py --weightPath src/models/backbone.pth --device cuda:0 --poolResultName CelebrityPool2.pkl --imagePaths CelebaImages
 ```
 ## 2. Find Your Twin
+You've created your pool and now it's time to try it out. First of all, you need one input image to perform the test. I left mine for testing if you want to use it :) 
+There are two parameters in the command you will use here, except the ones you set when creating the pool.
+```
+Format:
+python create_pool.py --yourImage <Input inference image> --resultImageName <Your twin image name>
+
+Example:
+python create_pool.py --yourImage cengizhan.jpg --resultImageName Twin.jpg
+```
