@@ -19,8 +19,12 @@ The identity pool to be created will process all images of a dataset one by one 
 
 If you want to pass this process, the pool prepared with the CelebA dataset is available at this [link](https://drive.google.com/file/d/12z5Kdk4m7ONJHC2DJcMrgF8LuPdf1BGR/view?usp=sharing).
 
-If you are the lucky person who wants to prepare your pool in your own dataset, you should set the arguments.
+If you are the lucky person who wants to prepare your pool in your own dataset, you should set the arguments. If your dataset is ready and you have downloaded the face recognition model, you can start creating an identity pool with the following command.
 
 ```
-python create_pool.py --weightPath <> --device <> --poolResultName <> --imagePaths <>
+Format:
+python create_pool.py --weightPath <Path of backbone.pth> --device <CUDA or CPU> --poolResultName <Pickle save name> --imagePaths <Your images path>
+
+Example:
+python create_pool.py --weightPath src/models/backbone.pth --device cuda:0 --poolResultName CelebrityPool2.pkl --imagePaths CelebaImages
 ```
