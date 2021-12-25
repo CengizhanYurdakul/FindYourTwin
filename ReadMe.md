@@ -38,3 +38,4 @@ python create_pool.py --yourImage <Input inference image> --resultImageName <You
 Example:
 python create_pool.py --yourImage cengizhan.jpg --resultImageName Twin.jpg
 ```
+### The magic happened and you found the closest face to your own in the identity pool you created.
