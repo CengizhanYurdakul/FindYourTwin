@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from src.detection.FaceDetection import FaceDetector
 from src.recognition.FaceRecognition import FaceRecognizer
 
-class CelebrityFinder:
+class TwinFinder:
     def __init__(self, **args):
         self.args = args
         #TODO add feature to choose update pool or create new one
@@ -23,11 +23,11 @@ class CelebrityFinder:
         self.maxSimilarityImageName = None
         self.maxSimilarity = -1
         
-    def visualizeCelebrityVersion(self):
-        celebrityImage = cv2.imread(os.path.join(self.args["imagePaths"], self.maxSimilarityImageName))
+    def visualizeTwinVersion(self):
+        twinImage = cv2.imread(os.path.join(self.args["imagePaths"], self.maxSimilarityImageName))
                 
-        cv2.imwrite(self.args["resultImageName"], celebrityImage)
-        print("Your similarity with your celebrity: %s" % round(self.maxSimilarity, 3))
+        cv2.imwrite(self.args["resultImageName"], twinImage)
+        print("Your similarity with your twin: %s" % round(self.maxSimilarity, 3))
  
     def find(self):
         inputImage = cv2.imread(self.args["yourImage"])
@@ -40,11 +40,11 @@ class CelebrityFinder:
         
         inputIdentity = self.faceRecognizer.extractIdentity(alignedImage)
         
-        for celebrityImageName in tqdm(self.identityPool.keys()):
-            celebrityIdentity = self.identityPool[celebrityImageName]
-            cosineSimilarity = float(cosine_similarity(inputIdentity.cpu(), celebrityIdentity))
+        for twinImageName in tqdm(self.identityPool.keys()):
+            twinIdentity = self.identityPool[twinImageName]
+            cosineSimilarity = float(cosine_similarity(inputIdentity.cpu(), twinIdentity))
             if cosineSimilarity > self.maxSimilarity:
                 self.maxSimilarity = cosineSimilarity
-                self.maxSimilarityImageName = celebrityImageName
+                self.maxSimilarityImageName = twinImageName
         
-        self.visualizeCelebrityVersion()
+        self.visualizeTwinVersion()
