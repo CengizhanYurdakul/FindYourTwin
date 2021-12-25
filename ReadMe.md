@@ -7,7 +7,7 @@ In this project, we will take a look at the problem of casting agencies, which i
 
 To run the project, you need to perform 2 steps. The first is to create an identity pool, and the second is to find the identity closest to the photo given as input in this pool.
 
-### **In accordance with GDPR, CCPA and KVKK images containing biometric information of individuals cannot be processed unless they consent.**
+### **According to GDPR, CCPA and KVKK images containing biometric information of individuals cannot be processed unless they consent.**
 
 ## Requirements
 First of all, I suggest you to create a new environment in order not to break the environment you are using. Then you can find the required tools from `requirements.txt`
