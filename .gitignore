@@ -1,4 +1,5 @@
+CelebaHQImages/
+CelebaImages/
 *.pth
 *.pyc
-*.jpg
 *.pkl
