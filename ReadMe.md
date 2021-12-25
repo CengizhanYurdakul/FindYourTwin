@@ -12,9 +12,15 @@ First of all, I suggest you to create a new environment in order not to break th
 ```
 pip install -r requirements.txt
 ```
+As the face recognition model, I use the PyTorch version of the ArcfaceR100 model from the [insightface](https://github.com/deepinsight/insightface) repository. You can download the weights by clicking this [link](https://onedrive.live.com/?cid=4a83b6b633b029cc&id=4A83B6B633B029CC!5577&authkey=!AFZjr283nwZHqbA) (Only backbone.pth is enough). Then place it  into `src/models/backbone.pth`.
 
 ## 1. Create Celebrity Identity Pool
 The identity pool to be created will process all images of a dataset one by one and save them to a pickle. If we need to go in accordance with the story, it can be said to process the images of the people in all the casting agencies one by one. This pool can be created with any dataset found on the Internet ([FFHQ](https://github.com/NVlabs/ffhq-dataset), [CelebA-HQ](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), [etc.](https://analyticsindiamag.com/10-face-datasets-to-start-facial-recognition-projects/)). As I said before, I will use the [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset.
 
 If you want to pass this process, the pool prepared with the CelebA dataset is available at this [link](https://drive.google.com/file/d/12z5Kdk4m7ONJHC2DJcMrgF8LuPdf1BGR/view?usp=sharing).
 
+If you are the lucky person who wants to prepare your pool in your own dataset, you should set the arguments.
+
+```
+python create_pool.py --weightPath <> --device <> --poolResultName <> --imagePaths <>
+```
