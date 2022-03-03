@@ -35,10 +35,10 @@ You've created your pool and now it's time to try it out. First of all, you need
 There are two parameters in the command you will use here, except the ones you set when creating the pool.
 ```
 Format:
-python create_pool.py --yourImage <Input inference image> --resultImageName <Your twin image name>
+python find_twin.py --yourImage <Input inference image> --resultImageName <Your twin image name>
 
 Example:
-python create_pool.py --yourImage cengizhan.jpg --resultImageName Twin.jpg
+python find_twin.py --yourImage cengizhan.jpg --resultImageName Twin.jpg
 ```
 ### The magic happened and you found the closest face to your own in the identity pool you created.
 ![InputImage](src/docs/cengizhanCropped.jpg) ![TwinImage](src/docs/Twin.jpg)
